@@ -1,0 +1,18 @@
+@media(max-width:744px) {
+
+    .index_header {
+        padding-inline: 24px;
+    }
+
+    /* section1 */
+
+    .section1 {
+        height: 480px;
+    }
+
+    /* footer */
+
+    .index_footer {
+        column-gap: 40px;
+    }
+}
