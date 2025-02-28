@@ -53,6 +53,26 @@
         align-items: center;
     }
 
+    /* catalog page */
+
+    .catalog_section1 {
+        padding: 32px 20px;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .list_button {
+        width: 36px;
+        height: 32px;
+    }
+
+    .scroll_button {
+        width: 52px;
+        height: 40px;
+    }
+
 
 }
 
@@ -60,6 +80,11 @@
 
     /* header */
     .index_header {
+        padding-inline: 8px;
+    }
+
+    /* catalog page */
+    .catalog_section1 {
         padding-inline: 8px;
     }
 }

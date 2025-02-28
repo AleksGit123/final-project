@@ -15,4 +15,19 @@
     .index_footer {
         column-gap: 40px;
     }
+
+    /* catalog page */
+
+    .catalog_section1 {
+        padding: 48px 24px;
+    }
+
+    .article_section {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .catalog_article:nth-last-child(-n + 5) {
+        display: none;
+    }
 }
