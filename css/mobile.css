@@ -73,6 +73,22 @@
         height: 40px;
     }
 
+    /* contact page */
+
+    .contact_section1 {
+        padding-inline: 20px;
+        height: 883px;
+    }
+
+    .form_header {
+        font-size: 32px;
+        line-height: 39px;
+    }
+
+    .input_div {
+        flex-direction: column;
+        row-gap: 36px;
+    }
 
 }
 
@@ -87,4 +103,25 @@
     .catalog_section1 {
         padding-inline: 8px;
     }
+
+    /* contact page */
+
+    .contact_section1 {
+        padding: 48px 8px;
+        /* height: 808px; */
+    }
+
+    .contact_section_div {
+        padding-inline: 8px;
+    }
+
+    .form_header {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .map {
+        height: 200px;
+    }
+
 }

@@ -30,4 +30,33 @@
     .catalog_article:nth-last-child(-n + 5) {
         display: none;
     }
+
+    /* contact page */
+
+    .contact_section1 {
+        padding: 64px 24px;
+        height: 807px;
+    }
+
+    .contact_section_div {
+        flex-direction: column;
+        padding: 16px;
+        row-gap: 48px;
+
+    }
+
+    .form_header {
+        margin-bottom: 24px;
+        font-size: 32px;
+        line-height: 39px;
+    }
+
+    .social_links_section {
+        row-gap: 24px;
+    }
+
+    .map {
+        height: 200px;
+    }
+
 }

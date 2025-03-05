@@ -41,6 +41,10 @@
         display: none;
     }
 
+    /* contact page */
 
+    .contact_section1 {
+        padding-inline: 32px;
+    }
 
 }
