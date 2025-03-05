@@ -21,6 +21,7 @@
     width: inherit;
     height: inherit;
     top: 0;
+
     z-index: 1;
 }
 
@@ -35,6 +36,29 @@
     cursor: pointer;
     transition: .4s ease-out;
     position: relative;
+}
+
+.burger_menu_nav {
+    width: 200px;
+    height: 144px;
+    background-color: #C46A2B;
+    position: absolute;
+    left: -80%;
+    top: 98.4px;
+    padding: 16px 56px 16px 16px;
+    display: none;
+    row-gap: 8px;
+    transition: .4s;
+
+}
+
+.burger_menu_links {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    color: #A1C3C9;
 }
 
 .burger_menu:hover {
@@ -323,6 +347,7 @@ page article headings */
     letter-spacing: 0%;
     color: var(--color);
     transition: .3s;
+    cursor: pointer;
 }
 
 .add_button:hover {
@@ -671,8 +696,15 @@ page article headings */
     color: #FFFFFF;
     padding-left: 8px;
     outline: none;
-
+    transition: .3s;
 }
+
+.form_input:hover {
+    box-shadow: 0 0 15px var(--border_color);
+    border-color: var(--border_color);
+}
+
+
 
 ::placeholder {
     font-family: var(--family);
@@ -685,7 +717,6 @@ page article headings */
 
 .message_text {
     width: 100%;
-    height: 96px;
     resize: none;
     margin-block: 36px;
     background-color: transparent;
@@ -695,7 +726,12 @@ page article headings */
     font-family: var(--family);
     color: #FFFFFF;
     outline: none;
+    transition: .3s;
+}
 
+.message_text:hover {
+    box-shadow: 0 0 15px var(--border_color);
+    border-color: var(--border_color);
 }
 
 .send_button {
