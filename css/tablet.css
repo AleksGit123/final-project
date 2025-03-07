@@ -8,6 +8,11 @@
 
     .section1 {
         height: 480px;
+        padding-top: 32px;
+    }
+
+    .section2 {
+        padding: 48px 0 36px 24px;
     }
 
     /* footer */
@@ -31,6 +36,9 @@
         display: none;
     }
 
+    /* section2 */
+
+
     /* contact page */
 
     .contact_section1 {
@@ -45,14 +53,25 @@
 
     }
 
+    .form_section,
+    .social_links_section {
+        width: 100%;
+    }
+
     .form_header {
         margin-bottom: 24px;
         font-size: 32px;
         line-height: 39px;
     }
 
+
+
     .social_links_section {
         row-gap: 24px;
+    }
+
+    .links_div {
+        column-gap: 42px;
     }
 
     .map {

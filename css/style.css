@@ -1,13 +1,11 @@
 @import url(variables.css);
-@import url(animations.css);
-
 
 .main_tag {
     width: min(100%, 1440px);
     margin: auto;
-    position: relative;
     padding-top: 98.4px;
     transition: .5s;
+    /* position: relative; */
 }
 
 .index_header {
@@ -21,8 +19,18 @@
     width: inherit;
     height: inherit;
     top: 0;
-
     z-index: 1;
+}
+
+.close_button {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.close_button:hover {
+    font-size: 40px;
 }
 
 .burger_button {
@@ -35,22 +43,33 @@
     font-size: 32px;
     cursor: pointer;
     transition: .4s ease-out;
-    position: relative;
 }
+
+.burger_menu:hover {
+    font-size: 40px;
+}
+
 
 .burger_menu_nav {
     width: 200px;
     height: 144px;
-    background-color: #C46A2B;
+    padding: 16px 50px 16px 16px;
     position: absolute;
-    left: -80%;
     top: 98.4px;
-    padding: 16px 56px 16px 16px;
-    display: none;
-    row-gap: 8px;
-    transition: .4s;
-
+    left: -70%;
+    background-color: #C46A2B;
+    transition: .3s;
 }
+
+
+
+.burger_menu_ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+
 
 .burger_menu_links {
     font-family: Inter;
@@ -59,11 +78,17 @@
     line-height: 32px;
     letter-spacing: 0%;
     color: #A1C3C9;
+    transition: .3s;
 }
 
-.burger_menu:hover {
-    font-size: 40px;
+.burger_menu_ul li {
+    transition: .3s;
 }
+
+.burger_menu_ul li:hover {
+    transform: translateX(10px);
+}
+
 
 .page_ul {
     display: flex;
@@ -78,8 +103,9 @@
     letter-spacing: 0%;
     color: #A1C3C9;
     transition: all .2s ease-in;
-    /* border: 4px solid green; */
     position: relative;
+    /* border: 4px solid green; */
+
 }
 
 .active {
@@ -103,6 +129,15 @@
     animation: underline .3s 1 forwards;
 
 }
+
+.site_icon {
+    transition: .3s;
+}
+
+.site_icon:hover {
+    filter: drop-shadow(2px 2px 2px rgb(255, 0, 0));
+}
+
 
 @keyframes underline {
     from {
@@ -175,7 +210,7 @@
     background-repeat: no-repeat;
     background-position: center;
     height: 560px;
-    position: relative;
+
 
 }
 
@@ -200,14 +235,13 @@
 .section1_link {
     display: flex;
     column-gap: 24px;
-}
-
-.section1_link {
-    display: flex;
     align-items: center;
     height: 36px;
-
+    animation: fade 1s linear 1;
+    /* border: 3px solid red; */
 }
+
+
 
 .section1_heading {
     font-family: var(--family);
@@ -215,31 +249,75 @@
     font-size: 32px;
     line-height: 36px;
     letter-spacing: 0%;
+    white-space: nowrap;
+    overflow: hidden;
     color: var(--color);
 
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+
+    }
+
+    25% {
+        opacity: .5;
+    }
+
+    35% {
+        opacity: .3;
+    }
+
+    50% {
+        opacity: .6;
+    }
+
+    70% {
+        opacity: .4;
+    }
+
+    80% {
+        opacity: .6;
+    }
+
+    100% {
+
+        opacity: 1;
+    }
 }
 
 
 
 .section1_span {
     color: var(--border_color);
+
 }
 
 .section1_button {
     width: 36px;
-    /* height: 24px; */
     background-color: #C46A2B;
     border-radius: 4px;
     border: none;
     cursor: pointer;
-    transition: all .4s;
-
+    transition: .4s;
+    animation: opacity 1s linear 1;
 }
 
 
 .section1_button:hover {
-    transform: translateX(10px);
+    transform: scale(1.1);
     box-shadow: 0 0 20px rgba(196, 106, 43, 0.7);
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .arrow_icon {
@@ -362,7 +440,6 @@ page article headings */
     padding-block: 48px;
     justify-content: center;
     column-gap: 157px;
-
 }
 
 
@@ -425,24 +502,20 @@ page article headings */
 }
 
 .catalog_section1 {
-
     display: flex;
     flex-direction: column;
     background-color: #012426;
-    /* border-top: 2px solid var(--border_color); */
     padding: 96px 94px;
 }
 
 .header_div {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
 }
 
 .filter_div {
     display: flex;
-    align-items: center;
     column-gap: 16px;
     cursor: pointer;
 }
@@ -501,8 +574,6 @@ page article headings */
     transition: .5s;
     position: relative;
     background-color: transparent;
-    position: relative;
-    /* filter: blur(10px); */
 
 }
 
@@ -531,6 +602,7 @@ page article headings */
 
 .catalog_image_div img {
     width: 100%;
+    height: 298px;
     object-fit: cover;
     transition: .5s;
 }
@@ -570,7 +642,6 @@ page article headings */
 
 .scroll_section {
     display: flex;
-    justify-content: center;
     align-items: center;
     column-gap: 48px;
     margin: auto;
@@ -579,15 +650,15 @@ page article headings */
 
 .scroll_button {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     column-gap: 16px;
-    width: 121px;
-    height: 40px;
+
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: .5s;
+    padding: 8px;
 }
 
 .scroll_button_text {
@@ -606,13 +677,14 @@ page article headings */
 .right:hover {
     box-shadow: 20px 0 5px rgba(5, 188, 202, 0.7),
         40px 0 5px rgba(5, 188, 202, 0.3);
-
     transform: translateX(10px);
 
 }
 
 .left {
     background-color: #C46A2B;
+    width: 121px;
+    height: 40px;
 }
 
 .left:hover {
@@ -634,6 +706,8 @@ page article headings */
 
 .right {
     background-color: var(--border_color);
+    width: 92px;
+    height: 40px;
 }
 
 
@@ -651,15 +725,24 @@ page article headings */
 .contact_section_div {
     display: flex;
     background-color: #2C4246CC;
-    width: 100%;
     border: 1px solid var(--border_color);
     border-radius: 10px;
     column-gap: 40px;
     padding: 32px;
+    transform: scale(0);
+    animation: scale .7s linear .2s 1 forwards;
+}
+
+@keyframes scale {
+
+
+    to {
+        transform: scale(1);
+    }
 }
 
 .form_section {
-    width: 100%;
+    width: 440px;
 }
 
 .form_header {
@@ -717,6 +800,7 @@ page article headings */
 
 .message_text {
     width: 100%;
+    height: 96px;
     resize: none;
     margin-block: 36px;
     background-color: transparent;
@@ -762,10 +846,9 @@ page article headings */
     flex-direction: column;
     align-items: center;
     row-gap: 64px;
-    width: 100%;
+    width: 494px;
 
 }
-
 
 .links_div {
     display: flex;
@@ -840,6 +923,7 @@ page article headings */
 }
 
 .map {
+    display: block;
     width: 100%;
     height: 264px;
     border-radius: 10px;

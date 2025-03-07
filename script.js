@@ -1,13 +1,21 @@
 "use strict"
 
 let burgerMenu = document.querySelector(".burger_menu");
-let menu = document.querySelector(".burger_menu_nav");
-let makeAppear = document.querySelector(".burger_menu_nav").style;
+let closeIcon = document.querySelector(".close_button");
+let pageList = document.querySelector(".burger_menu_nav");
+
+
+  
 burgerMenu.addEventListener("click", () => {
-    if(makeAppear.left === "0px"){
-            makeAppear.left = "-80%";
-    }
-    else{
-        makeAppear.left = "0px";
-    }
-})
+    closeIcon.style.display = "block"; 
+    burgerMenu.style.display ="none"; 
+    pageList.style.left ="0";  
+});
+
+closeIcon.addEventListener("click", () => {
+    closeIcon.style.display ="none"; 
+    burgerMenu.style.display = "block";
+    pageList.style.left = "-70%"; 
+});
+
+
