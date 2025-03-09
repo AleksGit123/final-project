@@ -11,6 +11,16 @@
         height: 40px;
     }
 
+
+    .header_buttons {
+        width: 32px;
+        height: 32px;
+    }
+
+    .header_icons {
+        font-size: 12px;
+    }
+
     /* section1 */
 
     .section1_heading {
@@ -21,7 +31,7 @@
     /* section2 */
 
     .section2 {
-        padding: 32px 20px;
+        padding: 32px 0 32px 20px;
     }
 
     .section2_heading {

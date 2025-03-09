@@ -5,7 +5,6 @@
     margin: auto;
     padding-top: 98.4px;
     transition: .5s;
-    /* position: relative; */
 }
 
 .index_header {
@@ -31,11 +30,6 @@
 
 .close_button:hover {
     font-size: 40px;
-}
-
-.burger_button {
-    background-color: transparent;
-    border: none;
 }
 
 .burger_menu {
@@ -551,6 +545,7 @@ page article headings */
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: .4s;
 }
 
 .best_selling {
@@ -563,7 +558,10 @@ page article headings */
 
 }
 
-
+.list_button:hover {
+    transform: translateY(10px);
+    box-shadow: 0 -10px 15px #415d64;
+}
 
 .article_section {
     display: grid;
@@ -650,8 +648,8 @@ page article headings */
 
 .scroll_button {
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
+    justify-content: center;
+
     column-gap: 16px;
 
     border: none;
